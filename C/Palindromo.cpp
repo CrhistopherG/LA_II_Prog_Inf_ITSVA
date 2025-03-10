@@ -43,4 +43,6 @@ int main() {
 
 // clang++ -S -emit-llvm Palindromo.cpp -o Palindromo.ll
 
+// clang++ -S -emit-llvm Palindromo.cpp -o Palindromo.ll -I""C:\msys64\mingw64\include"" -L""C:\msys64\mingw64\lib"" -v
+
 //

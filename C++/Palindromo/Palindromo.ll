@@ -75,12 +75,12 @@ define dso_local noundef zeroext i1 @_Z12esPalindromoRKNSt7__cxx1112basic_string
   store ptr %13, ptr %4, align 8
   %14 = load ptr, ptr %4, align 8
   %15 = call i64 @_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5beginEv(ptr noundef nonnull align 8 dereferenceable(32) %14) #8
-  %16 = getelementptr inbounds nuw %"class.__gnu_cxx::__normal_iterator", ptr %5, i32 0, i32 0
+  %16 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", ptr %5, i32 0, i32 0
   %17 = inttoptr i64 %15 to ptr
   store ptr %17, ptr %16, align 8
   %18 = load ptr, ptr %4, align 8
   %19 = call i64 @_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE3endEv(ptr noundef nonnull align 8 dereferenceable(32) %18) #8
-  %20 = getelementptr inbounds nuw %"class.__gnu_cxx::__normal_iterator", ptr %6, i32 0, i32 0
+  %20 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", ptr %6, i32 0, i32 0
   %21 = inttoptr i64 %19 to ptr
   store ptr %21, ptr %20, align 8
   br label %22
@@ -132,17 +132,17 @@ define dso_local noundef zeroext i1 @_Z12esPalindromoRKNSt7__cxx1112basic_string
 
 45:                                               ; preds = %44
   %46 = call i64 @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5beginEv(ptr noundef nonnull align 8 dereferenceable(32) %10) #8
-  %47 = getelementptr inbounds nuw %"class.__gnu_cxx::__normal_iterator.0", ptr %11, i32 0, i32 0
+  %47 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator.0", ptr %11, i32 0, i32 0
   %48 = inttoptr i64 %46 to ptr
   store ptr %48, ptr %47, align 8
   %49 = call i64 @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE3endEv(ptr noundef nonnull align 8 dereferenceable(32) %10) #8
-  %50 = getelementptr inbounds nuw %"class.__gnu_cxx::__normal_iterator.0", ptr %12, i32 0, i32 0
+  %50 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator.0", ptr %12, i32 0, i32 0
   %51 = inttoptr i64 %49 to ptr
   store ptr %51, ptr %50, align 8
-  %52 = getelementptr inbounds nuw %"class.__gnu_cxx::__normal_iterator.0", ptr %11, i32 0, i32 0
+  %52 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator.0", ptr %11, i32 0, i32 0
   %53 = load ptr, ptr %52, align 8
   %54 = ptrtoint ptr %53 to i64
-  %55 = getelementptr inbounds nuw %"class.__gnu_cxx::__normal_iterator.0", ptr %12, i32 0, i32 0
+  %55 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator.0", ptr %12, i32 0, i32 0
   %56 = load ptr, ptr %55, align 8
   %57 = ptrtoint ptr %56 to i64
   invoke void @_ZSt7reverseIN9__gnu_cxx17__normal_iteratorIPcNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEEvT_SA_(i64 %54, i64 %57)
@@ -206,7 +206,7 @@ define linkonce_odr dso_local noundef nonnull align 1 dereferenceable(1) ptr @_Z
   %2 = alloca ptr, align 8
   store ptr %0, ptr %2, align 8
   %3 = load ptr, ptr %2, align 8
-  %4 = getelementptr inbounds nuw %"class.__gnu_cxx::__normal_iterator", ptr %3, i32 0, i32 0
+  %4 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", ptr %3, i32 0, i32 0
   %5 = load ptr, ptr %4, align 8
   ret ptr %5
 }
@@ -226,9 +226,9 @@ define linkonce_odr dso_local noundef nonnull align 8 dereferenceable(8) ptr @_Z
   %2 = alloca ptr, align 8
   store ptr %0, ptr %2, align 8
   %3 = load ptr, ptr %2, align 8
-  %4 = getelementptr inbounds nuw %"class.__gnu_cxx::__normal_iterator", ptr %3, i32 0, i32 0
+  %4 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", ptr %3, i32 0, i32 0
   %5 = load ptr, ptr %4, align 8
-  %6 = getelementptr inbounds nuw i8, ptr %5, i32 1
+  %6 = getelementptr inbounds i8, ptr %5, i32 1
   store ptr %6, ptr %4, align 8
   ret ptr %3
 }
@@ -244,23 +244,23 @@ define linkonce_odr dso_local void @_ZSt7reverseIN9__gnu_cxx17__normal_iteratorI
   %7 = alloca %"class.__gnu_cxx::__normal_iterator.0", align 8
   %8 = alloca %"class.__gnu_cxx::__normal_iterator.0", align 8
   %9 = alloca %"struct.std::random_access_iterator_tag", align 1
-  %10 = getelementptr inbounds nuw %"class.__gnu_cxx::__normal_iterator.0", ptr %5, i32 0, i32 0
+  %10 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator.0", ptr %5, i32 0, i32 0
   %11 = inttoptr i64 %0 to ptr
   store ptr %11, ptr %10, align 8
-  %12 = getelementptr inbounds nuw %"class.__gnu_cxx::__normal_iterator.0", ptr %6, i32 0, i32 0
+  %12 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator.0", ptr %6, i32 0, i32 0
   %13 = inttoptr i64 %1 to ptr
   store ptr %13, ptr %12, align 8
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %7, ptr align 8 %5, i64 8, i1 false)
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %8, ptr align 8 %6, i64 8, i1 false)
   store ptr %5, ptr %4, align 8
   %14 = load i8, ptr %3, align 1
-  %15 = getelementptr inbounds nuw %"class.__gnu_cxx::__normal_iterator.0", ptr %7, i32 0, i32 0
+  %15 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator.0", ptr %7, i32 0, i32 0
   %16 = load ptr, ptr %15, align 8
   %17 = ptrtoint ptr %16 to i64
-  %18 = getelementptr inbounds nuw %"class.__gnu_cxx::__normal_iterator.0", ptr %8, i32 0, i32 0
+  %18 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator.0", ptr %8, i32 0, i32 0
   %19 = load ptr, ptr %18, align 8
   %20 = ptrtoint ptr %19 to i64
-  %21 = getelementptr inbounds nuw %"struct.std::random_access_iterator_tag", ptr %9, i32 0, i32 0
+  %21 = getelementptr inbounds %"struct.std::random_access_iterator_tag", ptr %9, i32 0, i32 0
   %22 = load i8, ptr %21, align 1
   call void @_ZSt9__reverseIN9__gnu_cxx17__normal_iteratorIPcNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEEvT_SA_St26random_access_iterator_tag(i64 %17, i64 %20, i8 %22)
   ret void
@@ -396,7 +396,7 @@ define linkonce_odr dso_local noundef nonnull align 8 dereferenceable(8) ptr @_Z
   %2 = alloca ptr, align 8
   store ptr %0, ptr %2, align 8
   %3 = load ptr, ptr %2, align 8
-  %4 = getelementptr inbounds nuw %"class.__gnu_cxx::__normal_iterator", ptr %3, i32 0, i32 0
+  %4 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", ptr %3, i32 0, i32 0
   ret ptr %4
 }
 
@@ -407,13 +407,13 @@ define linkonce_odr dso_local void @_ZSt9__reverseIN9__gnu_cxx17__normal_iterato
   %6 = alloca %"struct.std::random_access_iterator_tag", align 1
   %7 = alloca %"class.__gnu_cxx::__normal_iterator.0", align 8
   %8 = alloca %"class.__gnu_cxx::__normal_iterator.0", align 8
-  %9 = getelementptr inbounds nuw %"class.__gnu_cxx::__normal_iterator.0", ptr %4, i32 0, i32 0
+  %9 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator.0", ptr %4, i32 0, i32 0
   %10 = inttoptr i64 %0 to ptr
   store ptr %10, ptr %9, align 8
-  %11 = getelementptr inbounds nuw %"class.__gnu_cxx::__normal_iterator.0", ptr %5, i32 0, i32 0
+  %11 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator.0", ptr %5, i32 0, i32 0
   %12 = inttoptr i64 %1 to ptr
   store ptr %12, ptr %11, align 8
-  %13 = getelementptr inbounds nuw %"struct.std::random_access_iterator_tag", ptr %6, i32 0, i32 0
+  %13 = getelementptr inbounds %"struct.std::random_access_iterator_tag", ptr %6, i32 0, i32 0
   store i8 %2, ptr %13, align 1
   %14 = call noundef zeroext i1 @_ZN9__gnu_cxxeqIPcNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEbRKNS_17__normal_iteratorIT_T0_EESD_(ptr noundef nonnull align 8 dereferenceable(8) %4, ptr noundef nonnull align 8 dereferenceable(8) %5) #8
   br i1 %14, label %15, label %16
@@ -432,10 +432,10 @@ define linkonce_odr dso_local void @_ZSt9__reverseIN9__gnu_cxx17__normal_iterato
 20:                                               ; preds = %18
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %7, ptr align 8 %4, i64 8, i1 false)
   call void @llvm.memcpy.p0.p0.i64(ptr align 8 %8, ptr align 8 %5, i64 8, i1 false)
-  %21 = getelementptr inbounds nuw %"class.__gnu_cxx::__normal_iterator.0", ptr %7, i32 0, i32 0
+  %21 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator.0", ptr %7, i32 0, i32 0
   %22 = load ptr, ptr %21, align 8
   %23 = ptrtoint ptr %22 to i64
-  %24 = getelementptr inbounds nuw %"class.__gnu_cxx::__normal_iterator.0", ptr %8, i32 0, i32 0
+  %24 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator.0", ptr %8, i32 0, i32 0
   %25 = load ptr, ptr %24, align 8
   %26 = ptrtoint ptr %25 to i64
   call void @_ZSt9iter_swapIN9__gnu_cxx17__normal_iteratorIPcNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEES9_EvT_T0_(i64 %23, i64 %26)
@@ -471,7 +471,7 @@ define linkonce_odr dso_local noundef nonnull align 8 dereferenceable(8) ptr @_Z
   %2 = alloca ptr, align 8
   store ptr %0, ptr %2, align 8
   %3 = load ptr, ptr %2, align 8
-  %4 = getelementptr inbounds nuw %"class.__gnu_cxx::__normal_iterator.0", ptr %3, i32 0, i32 0
+  %4 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator.0", ptr %3, i32 0, i32 0
   %5 = load ptr, ptr %4, align 8
   %6 = getelementptr inbounds i8, ptr %5, i32 -1
   store ptr %6, ptr %4, align 8
@@ -498,10 +498,10 @@ define linkonce_odr dso_local noundef zeroext i1 @_ZN9__gnu_cxxltIPcNSt7__cxx111
 define linkonce_odr dso_local void @_ZSt9iter_swapIN9__gnu_cxx17__normal_iteratorIPcNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEES9_EvT_T0_(i64 %0, i64 %1) #2 comdat {
   %3 = alloca %"class.__gnu_cxx::__normal_iterator.0", align 8
   %4 = alloca %"class.__gnu_cxx::__normal_iterator.0", align 8
-  %5 = getelementptr inbounds nuw %"class.__gnu_cxx::__normal_iterator.0", ptr %3, i32 0, i32 0
+  %5 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator.0", ptr %3, i32 0, i32 0
   %6 = inttoptr i64 %0 to ptr
   store ptr %6, ptr %5, align 8
-  %7 = getelementptr inbounds nuw %"class.__gnu_cxx::__normal_iterator.0", ptr %4, i32 0, i32 0
+  %7 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator.0", ptr %4, i32 0, i32 0
   %8 = inttoptr i64 %1 to ptr
   store ptr %8, ptr %7, align 8
   %9 = call noundef nonnull align 1 dereferenceable(1) ptr @_ZNK9__gnu_cxx17__normal_iteratorIPcNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEdeEv(ptr noundef nonnull align 8 dereferenceable(8) %3) #8
@@ -515,9 +515,9 @@ define linkonce_odr dso_local noundef nonnull align 8 dereferenceable(8) ptr @_Z
   %2 = alloca ptr, align 8
   store ptr %0, ptr %2, align 8
   %3 = load ptr, ptr %2, align 8
-  %4 = getelementptr inbounds nuw %"class.__gnu_cxx::__normal_iterator.0", ptr %3, i32 0, i32 0
+  %4 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator.0", ptr %3, i32 0, i32 0
   %5 = load ptr, ptr %4, align 8
-  %6 = getelementptr inbounds nuw i8, ptr %5, i32 1
+  %6 = getelementptr inbounds i8, ptr %5, i32 1
   store ptr %6, ptr %4, align 8
   ret ptr %3
 }
@@ -527,7 +527,7 @@ define linkonce_odr dso_local noundef nonnull align 8 dereferenceable(8) ptr @_Z
   %2 = alloca ptr, align 8
   store ptr %0, ptr %2, align 8
   %3 = load ptr, ptr %2, align 8
-  %4 = getelementptr inbounds nuw %"class.__gnu_cxx::__normal_iterator.0", ptr %3, i32 0, i32 0
+  %4 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator.0", ptr %3, i32 0, i32 0
   ret ptr %4
 }
 
@@ -556,7 +556,7 @@ define linkonce_odr dso_local noundef nonnull align 1 dereferenceable(1) ptr @_Z
   %2 = alloca ptr, align 8
   store ptr %0, ptr %2, align 8
   %3 = load ptr, ptr %2, align 8
-  %4 = getelementptr inbounds nuw %"class.__gnu_cxx::__normal_iterator.0", ptr %3, i32 0, i32 0
+  %4 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator.0", ptr %3, i32 0, i32 0
   %5 = load ptr, ptr %4, align 8
   ret ptr %5
 }
@@ -630,6 +630,6 @@ attributes #10 = { noreturn nounwind }
 !1 = !{i32 8, !"PIC Level", i32 2}
 !2 = !{i32 7, !"uwtable", i32 2}
 !3 = !{i32 1, !"MaxTLSAlign", i32 65536}
-!4 = !{!"clang version 20.1.0"}
+!4 = !{!"clang version 19.1.4"}
 !5 = distinct !{!5, !6}
 !6 = !{!"llvm.loop.mustprogress"}

@@ -41,4 +41,9 @@ cd "C:\Users\Juan Pablo Pérez\Documents\GitHub\LA_II_Prog_Inf_ITSVA\C"
 g++ -o Ejercicio_15.exe Ejercicio_15.cpp
 ./Ejercicio_15.exe
 
+
+Comando para sacar el IR
+
+clang++ -S -emit-llvm Ejercicio_15.cpp -o Ejercicio_15.ll --target=x86_64-w64-mingw32 -stdlib=libstdc++ -I/mingw64/include/c++/13.2.0/
+
 */

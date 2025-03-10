@@ -1,11 +1,38 @@
 // 15. Escribe un programa que convierta un número decimal a binario. 
 
 #include <iostream>
+using namespace std;
 
-int main(){
-    std::cout << "Hola mundo" << std::endl;
+void decimalToBinary(int num) {
+    if (num == 0) {
+        cout << "0";
+        return;
+    }
+    
+    int binary[32]; // Array para almacenar los bits (32 suficiente para enteros)
+    int index = 0;
+    
+    while (num > 0) {
+        binary[index++] = num % 2;
+        num /= 2;
+    }
+    
+    // Imprimir en orden inverso
+    for (int i = index - 1; i >= 0; i--) {
+        cout << binary[i];
+    }
+}
+
+int main() {
+    int num;
+    cout << "Ingrese un numero decimal: ";
+    cin >> num;
+    cout << "El numero en binario es: ";
+    decimalToBinary(num);
+    cout << endl;
     return 0;
 }
+
 
 /* 
 

@@ -1,5 +1,7 @@
 // Escribe un programa que calcule el factorial de un número dado.
 
+package Java;
+
 import java.util.Scanner;
 
 public class Factorial {

@@ -1,0 +1,202 @@
+Codigo intermedio ejercicio6.py
+
+PS C:\Users\Juan Pablo Pérez\Documents\GitHub\LA_II_Prog_Inf_ITSVA\Python> python -m dis ejercicio6.py
+  0           RESUME                   0
+
+  1           LOAD_CONST               0 (0)
+              LOAD_CONST               1 (None)
+              IMPORT_NAME              0 (math)
+              STORE_NAME               0 (math)
+
+  3           LOAD_CONST               2 (<code object area_circulo at 0x000001C3CCF21830, file "ejercicio6.py", line 3>)
+              MAKE_FUNCTION
+              STORE_NAME               1 (area_circulo)
+
+  5           LOAD_CONST               3 (<code object area_triangulo at 0x000001C3CCD4ADB0, file "ejercicio6.py", line 5>)
+              MAKE_FUNCTION
+              STORE_NAME               2 (area_triangulo)
+
+  7           LOAD_CONST               4 (<code object area_rectangulo at 0x000001C3CCEE6090, file "ejercicio6.py", line 7>)
+              MAKE_FUNCTION
+              STORE_NAME               3 (area_rectangulo)
+
+ 11           LOAD_CONST               5 (<code object main at 0x000001C3CD05C0D0, file "ejercicio6.py", line 11>)
+              MAKE_FUNCTION
+              STORE_NAME               4 (main)
+
+ 40           LOAD_NAME                5 (__name__)
+              LOAD_CONST               6 ('__main__')
+              COMPARE_OP              88 (bool(==))
+              POP_JUMP_IF_FALSE        8 (to L1)
+
+ 41           LOAD_NAME                4 (main)
+              PUSH_NULL
+              CALL                     0
+              POP_TOP
+              RETURN_CONST             1 (None)
+
+ 40   L1:     RETURN_CONST             1 (None)
+
+Disassembly of <code object area_circulo at 0x000001C3CCF21830, file "ejercicio6.py", line 3>:
+  3           RESUME                   0
+
+  4           LOAD_GLOBAL              0 (math)
+              LOAD_ATTR                2 (pi)
+              LOAD_FAST                0 (radio)
+              LOAD_CONST               1 (2)
+              BINARY_OP                8 (**)
+              BINARY_OP                5 (*)
+              RETURN_VALUE
+
+Disassembly of <code object area_triangulo at 0x000001C3CCD4ADB0, file "ejercicio6.py", line 5>:
+  5           RESUME                   0
+
+  6           LOAD_FAST_LOAD_FAST      1 (base, altura)
+              BINARY_OP                5 (*)
+              LOAD_CONST               1 (2)
+              BINARY_OP               11 (/)
+              RETURN_VALUE
+
+Disassembly of <code object area_rectangulo at 0x000001C3CCEE6090, file "ejercicio6.py", line 7>:
+  7           RESUME                   0
+
+  8           LOAD_FAST_LOAD_FAST      1 (base, altura)
+              BINARY_OP                5 (*)
+              RETURN_VALUE
+
+Disassembly of <code object main at 0x000001C3CD05C0D0, file "ejercicio6.py", line 11>:
+ 11           RESUME                   0
+
+ 12           LOAD_CONST               1 (0)
+              STORE_FAST               0 (op)
+
+ 13           NOP
+
+ 14   L1:     LOAD_GLOBAL              1 (print + NULL)
+              LOAD_CONST               2 ('Bienvenido a la calculadora de areas')
+              CALL                     1
+              POP_TOP
+
+ 15           LOAD_GLOBAL              1 (print + NULL)
+              LOAD_CONST               3 ('1. Circulo')
+              CALL                     1
+              POP_TOP
+
+ 16           LOAD_GLOBAL              1 (print + NULL)
+              LOAD_CONST               4 ('2. Triangulo')
+              CALL                     1
+              POP_TOP
+
+ 17           LOAD_GLOBAL              1 (print + NULL)
+              LOAD_CONST               5 ('3. Rectangulo')
+              CALL                     1
+              POP_TOP
+
+ 18           LOAD_GLOBAL              1 (print + NULL)
+              LOAD_CONST               6 ('4. Salir')
+              CALL                     1
+              POP_TOP
+
+ 20           LOAD_GLOBAL              3 (int + NULL)
+              LOAD_GLOBAL              5 (input + NULL)
+              LOAD_CONST               7 ('Introduce la opcion: ')
+              CALL                     1
+              CALL                     1
+              STORE_FAST               0 (op)
+
+ 21           LOAD_FAST                0 (op)
+              LOAD_CONST               8 (1)
+              COMPARE_OP              88 (bool(==))
+              POP_JUMP_IF_FALSE       42 (to L2)
+
+ 22           LOAD_GLOBAL              3 (int + NULL)
+              LOAD_GLOBAL              5 (input + NULL)
+              LOAD_CONST               9 ('Introduce el radio: ')
+              CALL                     1
+              CALL                     1
+              STORE_FAST               1 (radio)
+
+ 23           LOAD_GLOBAL              1 (print + NULL)
+              LOAD_CONST              10 ('El area del circulo es: ')
+              LOAD_GLOBAL              7 (area_circulo + NULL)
+              LOAD_FAST                1 (radio)
+              CALL                     1
+              CALL                     2
+              POP_TOP
+              JUMP_FORWARD           165 (to L6)
+
+ 24   L2:     LOAD_FAST                0 (op)
+              LOAD_CONST              11 (2)
+              COMPARE_OP              88 (bool(==))
+              POP_JUMP_IF_FALSE       62 (to L3)
+
+ 25           LOAD_GLOBAL              3 (int + NULL)
+              LOAD_GLOBAL              5 (input + NULL)
+              LOAD_CONST              12 ('Introduce la base: ')
+              CALL                     1
+              CALL                     1
+              STORE_FAST               2 (base)
+
+ 26           LOAD_GLOBAL              3 (int + NULL)
+              LOAD_GLOBAL              5 (input + NULL)
+              LOAD_CONST              13 ('Introduce la altura: ')
+              CALL                     1
+              CALL                     1
+              STORE_FAST               3 (altura)
+
+ 27           LOAD_GLOBAL              1 (print + NULL)
+              LOAD_CONST              14 ('El area del triangulo es: ')
+              LOAD_GLOBAL              9 (area_triangulo + NULL)
+              LOAD_FAST_LOAD_FAST     35 (base, altura)
+              CALL                     2
+              CALL                     2
+              POP_TOP
+              JUMP_FORWARD            97 (to L6)
+
+ 28   L3:     LOAD_FAST                0 (op)
+              LOAD_CONST              15 (3)
+              COMPARE_OP              88 (bool(==))
+              POP_JUMP_IF_FALSE       62 (to L4)
+
+ 29           LOAD_GLOBAL              3 (int + NULL)
+              LOAD_GLOBAL              5 (input + NULL)
+              LOAD_CONST              12 ('Introduce la base: ')
+              CALL                     1
+              CALL                     1
+              STORE_FAST               2 (base)
+
+ 30           LOAD_GLOBAL              3 (int + NULL)
+              LOAD_GLOBAL              5 (input + NULL)
+              LOAD_CONST              13 ('Introduce la altura: ')
+              CALL                     1
+              CALL                     1
+              STORE_FAST               3 (altura)
+
+ 31           LOAD_GLOBAL              1 (print + NULL)
+              LOAD_CONST              16 ('El area del rectangulo es: ')
+              LOAD_GLOBAL             11 (area_rectangulo + NULL)
+              LOAD_FAST_LOAD_FAST     35 (base, altura)
+              CALL                     2
+              CALL                     2
+              POP_TOP
+              JUMP_FORWARD            29 (to L6)
+
+ 32   L4:     LOAD_FAST                0 (op)
+              LOAD_CONST              17 (4)
+              COMPARE_OP              88 (bool(==))
+              POP_JUMP_IF_FALSE       12 (to L5)
+
+ 33           LOAD_GLOBAL              1 (print + NULL)
+              LOAD_CONST              18 ('Saliendo...')
+              CALL                     1
+              POP_TOP
+
+ 34           RETURN_CONST             0 (None)
+
+ 36   L5:     LOAD_GLOBAL              1 (print + NULL)
+              LOAD_CONST              19 ('Opcion no valida')
+              CALL                     1
+              POP_TOP
+
+ 13   L6:     EXTENDED_ARG             1
+              JUMP_BACKWARD          291 (to L1)

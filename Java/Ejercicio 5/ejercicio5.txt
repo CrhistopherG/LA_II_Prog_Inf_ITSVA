@@ -1,0 +1,57 @@
+Codigo intermedio ejercicio5.java
+
+PS C:\Users\Juan Pablo Pérez\Documents\GitHub\LA_II_Prog_Inf_ITSVA\Java> javap -c ejercicio5
+Compiled from "ejercicio5.java"
+public class ejercicio5 {
+  public ejercicio5();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void main(java.lang.String[]);
+    Code:
+       0: getstatic     #7                  // Field java/lang/System.out:Ljava/io/PrintStream;
+       3: ldc           #13                 // String Adivina el numero
+       5: invokevirtual #15                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+       8: invokestatic  #21                 // Method java/lang/Math.random:()D
+      11: ldc2_w        #27                 // double 10.0d
+      14: dmul
+      15: dconst_1
+      16: dadd
+      17: d2i
+      18: istore_1
+      19: iconst_0
+      20: istore_2
+      21: iconst_0
+      22: istore_3
+      23: getstatic     #7                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      26: ldc           #29                 // String Ingrese un numero:
+      28: invokevirtual #15                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      31: new           #31                 // class java/util/Scanner
+      34: dup
+      35: getstatic     #33                 // Field java/lang/System.in:Ljava/io/InputStream;
+      38: invokespecial #37                 // Method java/util/Scanner."<init>":(Ljava/io/InputStream;)V
+      41: astore        4
+      43: aload         4
+      45: invokevirtual #40                 // Method java/util/Scanner.nextInt:()I
+      48: istore_2
+      49: iinc          3, 1
+      52: iload_2
+      53: iload_1
+      54: if_icmple     68
+      57: getstatic     #7                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      60: ldc           #44                 // String El numero es menor
+      62: invokevirtual #15                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      65: goto          81
+      68: iload_2
+      69: iload_1
+      70: if_icmpge     81
+      73: getstatic     #7                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      76: ldc           #46                 // String El numero es mayor
+      78: invokevirtual #15                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      81: iload_2
+      82: iload_1
+      83: if_icmpne     23
+      86: return
+}

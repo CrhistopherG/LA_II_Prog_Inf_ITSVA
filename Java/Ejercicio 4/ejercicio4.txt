@@ -1,0 +1,71 @@
+Codigo intermedio ejercicio4.java
+
+PS C:\Users\Juan Pablo Pérez\Documents\GitHub\LA_II_Prog_Inf_ITSVA\Java> javap -c ejercicio4 
+Compiled from "ejercicio4.java"
+public class ejercicio4 {
+  public ejercicio4();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void main(java.lang.String[]);
+    Code:
+       0: iconst_0
+       1: istore_1
+       2: getstatic     #7                  // Field java/lang/System.out:Ljava/io/PrintStream;
+       5: ldc           #13                 // String Suma de los digitos de un numero
+       7: invokevirtual #15                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      10: getstatic     #7                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      13: ldc           #21                 // String Ingrese un numero:
+      15: invokevirtual #15                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      18: new           #23                 // class java/util/Scanner
+      21: dup
+      22: getstatic     #25                 // Field java/lang/System.in:Ljava/io/InputStream;
+      25: invokespecial #29                 // Method java/util/Scanner."<init>":(Ljava/io/InputStream;)V
+      28: astore_2
+      29: aload_2
+      30: invokevirtual #32                 // Method java/util/Scanner.nextInt:()I
+      33: istore_3
+      34: getstatic     #7                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      37: iload_3
+      38: iload_3
+      39: invokestatic  #36                 // Method sumardigitos:(I)I
+      42: invokedynamic #42,  0             // InvokeDynamic #0:makeConcatWithConstants:(II)Ljava/lang/String;
+      47: invokevirtual #15                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      50: getstatic     #7                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      53: ldc           #46                 // String Desea ingresar otro numero? 1=si 2=no
+      55: invokevirtual #15                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      58: new           #23                 // class java/util/Scanner
+      61: dup
+      62: getstatic     #25                 // Field java/lang/System.in:Ljava/io/InputStream;
+      65: invokespecial #29                 // Method java/util/Scanner."<init>":(Ljava/io/InputStream;)V
+      68: astore        4
+      70: aload         4
+      72: invokevirtual #32                 // Method java/util/Scanner.nextInt:()I
+      75: istore_1
+      76: iload_1
+      77: iconst_1
+      78: if_icmpeq     2
+      81: return
+
+  public static int sumardigitos(int);
+    Code:
+       0: iconst_0
+       1: istore_1
+       2: iload_0
+       3: ifeq          21
+       6: iload_1
+       7: iload_0
+       8: bipush        10
+      10: irem
+      11: iadd
+      12: istore_1
+      13: iload_0
+      14: bipush        10
+      16: idiv
+      17: istore_0
+      18: goto          2
+      21: iload_1
+      22: ireturn
+}

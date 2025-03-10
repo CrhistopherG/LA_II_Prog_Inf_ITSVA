@@ -1,0 +1,126 @@
+Codigo intermedio Rangoprimo.py
+
+PS C:\Users\Juan Pablo Pérez\Documents\GitHub\LA_II_Prog_Inf_ITSVA\Python> python -m dis Rangoprimo.py
+  0           RESUME                   0
+
+  3           LOAD_CONST               0 (<code object es_primo at 0x0000011849E656B0, file "Rangoprimo.py", line 3>)
+              MAKE_FUNCTION
+              STORE_NAME               0 (es_primo)
+
+ 13           LOAD_CONST               1 (<code object encontrar_primos at 0x0000011849ED4D50, file "Rangoprimo.py", line 13>)
+              MAKE_FUNCTION
+              STORE_NAME               1 (encontrar_primos)
+
+ 21           LOAD_NAME                2 (__name__)
+              LOAD_CONST               2 ('__main__')
+              COMPARE_OP              88 (bool(==))
+              POP_JUMP_IF_FALSE       47 (to L1)
+
+ 22           LOAD_NAME                3 (int)
+              PUSH_NULL
+              LOAD_NAME                4 (input)
+              PUSH_NULL
+              LOAD_CONST               3 ('Ingrese el número inicial del rango: ')
+              CALL                     1
+              CALL                     1
+              STORE_NAME               5 (inicio)
+
+ 23           LOAD_NAME                3 (int)
+              PUSH_NULL
+              LOAD_NAME                4 (input)
+              PUSH_NULL
+              LOAD_CONST               4 ('Ingrese el número final del rango: ')
+              CALL                     1
+              CALL                     1
+              STORE_NAME               6 (fin)
+
+ 24           LOAD_NAME                1 (encontrar_primos)
+              PUSH_NULL
+              LOAD_NAME                5 (inicio)
+              LOAD_NAME                6 (fin)
+              CALL                     2
+              STORE_NAME               7 (primos)
+
+ 25           LOAD_NAME                8 (print)
+              PUSH_NULL
+              LOAD_CONST               5 ('Los números primos en el rango son:')
+              LOAD_NAME                7 (primos)
+              CALL                     2
+              POP_TOP
+              RETURN_CONST             6 (None)
+
+ 21   L1:     RETURN_CONST             6 (None)
+
+Disassembly of <code object es_primo at 0x0000011849E656B0, file "Rangoprimo.py", line 3>:
+  3           RESUME                   0
+
+  5           LOAD_FAST                0 (n)
+              LOAD_CONST               1 (2)
+              COMPARE_OP              18 (bool(<))
+              POP_JUMP_IF_FALSE        1 (to L1)
+
+  6           RETURN_CONST             2 (False)
+
+  8   L1:     LOAD_GLOBAL              1 (range + NULL)
+              LOAD_CONST               1 (2)
+              LOAD_GLOBAL              3 (int + NULL)
+              LOAD_FAST                0 (n)
+              LOAD_CONST               3 (0.5)
+              BINARY_OP                8 (**)
+              CALL                     1
+              LOAD_CONST               4 (1)
+              BINARY_OP                0 (+)
+              CALL                     2
+              GET_ITER
+      L2:     FOR_ITER                13 (to L4)
+              STORE_FAST               1 (i)
+
+  9           LOAD_FAST_LOAD_FAST      1 (n, i)
+              BINARY_OP                6 (%)
+              LOAD_CONST               5 (0)
+              COMPARE_OP              88 (bool(==))
+              POP_JUMP_IF_TRUE         2 (to L3)
+              JUMP_BACKWARD           13 (to L2)
+
+ 10   L3:     POP_TOP
+              RETURN_CONST             2 (False)
+
+  8   L4:     END_FOR
+              POP_TOP
+
+ 11           RETURN_CONST             6 (True)
+
+Disassembly of <code object encontrar_primos at 0x0000011849ED4D50, file "Rangoprimo.py", line 13>:
+ 13           RESUME                   0
+
+ 15           BUILD_LIST               0
+              STORE_FAST               2 (primos)
+
+ 16           LOAD_GLOBAL              1 (range + NULL)
+              LOAD_FAST_LOAD_FAST      1 (inicio, fin)
+              LOAD_CONST               1 (1)
+              BINARY_OP                0 (+)
+              CALL                     2
+              GET_ITER
+      L1:     FOR_ITER                38 (to L3)
+              STORE_FAST               3 (num)
+
+ 17           LOAD_GLOBAL              3 (es_primo + NULL)
+              LOAD_FAST                3 (num)
+              CALL                     1
+              TO_BOOL
+              POP_JUMP_IF_TRUE         2 (to L2)
+              JUMP_BACKWARD           21 (to L1)
+
+ 18   L2:     LOAD_FAST                2 (primos)
+              LOAD_ATTR                5 (append + NULL|self)
+              LOAD_FAST                3 (num)
+              CALL                     1
+              POP_TOP
+              JUMP_BACKWARD           40 (to L1)
+
+ 16   L3:     END_FOR
+              POP_TOP
+
+ 19           LOAD_FAST                2 (primos)
+              RETURN_VALUE

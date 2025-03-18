@@ -4,19 +4,19 @@ public class ejercicio4 {
 
     public static void main(String[] args) {
         int r = 0;
+        Scanner scanner = new Scanner(System.in);
 
         do {
             System.out.println("Suma de los digitos de un numero");
             System.out.println("Ingrese un numero: ");
-            Scanner scanner = new Scanner(System.in);
             int num = scanner.nextInt();
 
             System.out.println("La suma de los digitos de " + num + " es: " + sumardigitos(num));
-            System.out.println("Desea ingresar otro numero? 1=si 2=no");
-            Scanner scanner2 = new Scanner(System.in);
-            r = scanner2.nextInt();
+            System.out.println("Desea ingresar otro numero? \n1 = si \n2 = no");
+            r = scanner.nextInt();
 
         } while (r == 1);
+        scanner.close();
     }
 
     public static int sumardigitos(int num) {
@@ -26,7 +26,6 @@ public class ejercicio4 {
             num /= 10;
         }
         return suma;
-
     }
 
 }

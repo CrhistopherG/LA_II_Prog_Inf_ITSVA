@@ -1,6 +1,5 @@
 // 8. Implementa un algoritmo de ordenamiento (por ejemplo, burbuja, selección o 
 // inserción) para ordenar una lista de números. 
-package Java;
 
 import java.util.Scanner;
 

@@ -1,6 +1,4 @@
-Codigo intermedio ejercicio4.java
-
-PS C:\Users\Juan Pablo Pérez\Documents\GitHub\LA_II_Prog_Inf_ITSVA\Java> javap -c ejercicio4 
+PS C:\Users\Juan Pablo Pérez\Documents\GitHub\LA_II_Prog_Inf_ITSVA\java\Ejercicio 4> javap -c ejercicio4  
 Compiled from "ejercicio4.java"
 public class ejercicio4 {
   public ejercicio4();
@@ -13,41 +11,38 @@ public class ejercicio4 {
     Code:
        0: iconst_0
        1: istore_1
-       2: getstatic     #7                  // Field java/lang/System.out:Ljava/io/PrintStream;
-       5: ldc           #13                 // String Suma de los digitos de un numero
-       7: invokevirtual #15                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
-      10: getstatic     #7                  // Field java/lang/System.out:Ljava/io/PrintStream;
-      13: ldc           #21                 // String Ingrese un numero:
-      15: invokevirtual #15                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
-      18: new           #23                 // class java/util/Scanner
-      21: dup
-      22: getstatic     #25                 // Field java/lang/System.in:Ljava/io/InputStream;
-      25: invokespecial #29                 // Method java/util/Scanner."<init>":(Ljava/io/InputStream;)V
-      28: astore_2
+       2: new           #7                  // class java/util/Scanner
+       5: dup
+       6: getstatic     #9                  // Field java/lang/System.in:Ljava/io/InputStream;
+       9: invokespecial #15                 // Method java/util/Scanner."<init>":(Ljava/io/InputStream;)V
+      12: astore_2
+      13: getstatic     #18                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      16: ldc           #22                 // String Suma de los digitos de un numero
+      18: invokevirtual #24                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      21: getstatic     #18                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      24: ldc           #30                 // String Ingrese un numero:
+      26: invokevirtual #24                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
       29: aload_2
       30: invokevirtual #32                 // Method java/util/Scanner.nextInt:()I
       33: istore_3
-      34: getstatic     #7                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      34: getstatic     #18                 // Field java/lang/System.out:Ljava/io/PrintStream;
       37: iload_3
       38: iload_3
       39: invokestatic  #36                 // Method sumardigitos:(I)I
       42: invokedynamic #42,  0             // InvokeDynamic #0:makeConcatWithConstants:(II)Ljava/lang/String;
-      47: invokevirtual #15                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
-      50: getstatic     #7                  // Field java/lang/System.out:Ljava/io/PrintStream;
-      53: ldc           #46                 // String Desea ingresar otro numero? 1=si 2=no
-      55: invokevirtual #15                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
-      58: new           #23                 // class java/util/Scanner
-      61: dup
-      62: getstatic     #25                 // Field java/lang/System.in:Ljava/io/InputStream;
-      65: invokespecial #29                 // Method java/util/Scanner."<init>":(Ljava/io/InputStream;)V
-      68: astore        4
-      70: aload         4
-      72: invokevirtual #32                 // Method java/util/Scanner.nextInt:()I
-      75: istore_1
-      76: iload_1
-      77: iconst_1
-      78: if_icmpeq     2
-      81: return
+      47: invokevirtual #24                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      50: getstatic     #18                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      53: ldc           #46                 // String Desea ingresar otro numero? \n1 = si \n2 = no
+      55: invokevirtual #24                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      58: aload_2
+      59: invokevirtual #32                 // Method java/util/Scanner.nextInt:()I
+      62: istore_1
+      63: iload_1
+      64: iconst_1
+      65: if_icmpeq     13
+      68: aload_2
+      69: invokevirtual #48                 // Method java/util/Scanner.close:()V
+      72: return
 
   public static int sumardigitos(int);
     Code:

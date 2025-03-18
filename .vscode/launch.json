@@ -2,6 +2,27 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "Ejercicio_8",
+      "request": "launch",
+      "mainClass": "Ejercicio_8",
+      "projectName": "LA_II_Prog_Inf_ITSVA_6bbd8a44"
+    },
+    {
+      "type": "java",
+      "name": "ejercicio4",
+      "request": "launch",
+      "mainClass": "ejercicio4",
+      "projectName": "LA_II_Prog_Inf_ITSVA_6bbd8a44"
+    },
+    {
+      "type": "java",
+      "name": "ejercicio5",
+      "request": "launch",
+      "mainClass": "ejercicio5",
+      "projectName": "LA_II_Prog_Inf_ITSVA_6bbd8a44"
+    },
+    {
       "name": "(gdb) Launch",
       "type": "cppdbg",
       "request": "launch",
